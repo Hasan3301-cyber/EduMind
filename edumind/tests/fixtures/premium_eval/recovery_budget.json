@@ -1,0 +1,10 @@
+{
+  "budget": {
+    "max_tool_calls": 2,
+    "max_output_bytes": 100,
+    "max_elapsed_secs": 10
+  },
+  "first_consumption": { "tool_calls": 1, "output_bytes": 40, "elapsed_secs": 3 },
+  "rejected_consumption": { "tool_calls": 2, "output_bytes": 40, "elapsed_secs": 3 },
+  "expected_timeline_event": "run_cancelled"
+}

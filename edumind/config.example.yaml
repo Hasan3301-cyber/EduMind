@@ -1,0 +1,176 @@
+# EduMind safe local-development configuration.
+# Use ${ENVIRONMENT_VARIABLE} for secrets; unresolved values fail startup.
+
+meta:
+  name: EduMind
+  data_dir: data
+  log_level: info
+
+gateway:
+  bind_address: 127.0.0.1
+  port: 7878
+  request_body_max_bytes: 10485760
+  auth:
+    mode: none
+    token: null
+    jwt_secret: null
+  remote:
+    enabled: false
+    endpoint: null
+
+models:
+  default_provider: local
+  providers:
+    - id: local
+      kind: ollama
+      base_url: http://127.0.0.1:11434
+      api_key: null
+      models:
+        - id: llama3.2
+          context_window: 32768
+          input_cost_per_million: 0.0
+          output_cost_per_million: 0.0
+
+agents:
+  defaults:
+    default_agent: master
+    default_model: local/llama3.2
+    max_concurrent_runs: 2
+  sandbox:
+    enabled: true
+    root: Sandbox
+    max_control_file_bytes: 32768
+  list:
+    - id: master
+      name: Master Agent
+      enabled: true
+      model: null
+      workspace: null
+      system_prompt: Coordinate EduMind study workflows safely.
+      allowed_channels: [desktop]
+      allowed_tools: []
+      allowed_subagents: []
+      identity: EduMind study coordinator
+      timeout_secs: 120
+      max_concurrent_runs: null
+      max_spawn_depth: 2
+
+channels:
+  desktop:
+    enabled: true
+    account_id: desktop
+  telegram:
+    enabled: false
+    token: null
+    token_secret_name: null
+    allowed_user_ids: []
+    allowed_chat_ids: []
+    streaming: true
+    poll_timeout_secs: 30
+
+routing:
+  file: edumind/routing.yaml
+  hot_reload: true
+
+memory:
+  db_path: data/memory.db
+  embedding:
+    provider: hash
+    model: hash-v1
+    dimensions: 384
+  vector:
+    index_type: exact
+    dimensions: 384
+    candidate_count: 64
+  hermes:
+    enabled: false
+    max_cycles_per_day: 8
+    cooldown_secs: 300
+
+plugins:
+  directory: plugins
+  enabled: []
+
+tools:
+  profile: safe
+  enforce_allowlist: true
+  rate_limit_per_minute: 60
+  audit_log_capacity: 1000
+  max_tool_rounds: 8
+  latex_compile:
+    enabled: false
+    command: null
+  document_engine:
+    enabled: false
+    command: null
+  slide_engine:
+    enabled: false
+    command: null
+  image_engine:
+    enabled: false
+    command: null
+  notebooklm:
+    enabled: false
+    endpoint: null
+    timeout_secs: 900
+    prefer_for_ask: true
+    fallback_to_mcp: true
+  notebooklm_py:
+    enabled: false
+    endpoint: null
+    timeout_secs: 900
+    prefer_for_ask: true
+    fallback_to_mcp: true
+  ocr:
+    enabled: false
+    command: ocrmypdf
+    language: eng
+    timeout_secs: 300
+    min_text_chars: 200
+
+messages:
+  assistant_name: EduMind
+  welcome_message: What would you like to learn today?
+
+session:
+  max_messages: 100
+  max_age_minutes: 240
+
+web:
+  searxng:
+    enabled: false
+    endpoint: http://127.0.0.1:8080
+  tavily:
+    enabled: false
+    api_key: null
+  literature:
+    enabled: false
+    max_results: 20
+    sources: []
+
+jobs:
+  enabled: true
+  max_concurrent_jobs: 1
+  schedules: []
+
+security:
+  allowed_origins:
+    - http://localhost
+    - tauri://localhost
+  action_password_required: true
+  action_password_hash_path: data/action-password.argon2
+  action_password_min_length: 12
+  restrict_tool_writes: true
+  allowed_tool_write_roots:
+    - data/OUTPUT
+    - data/scratch
+  tool_daily_limits:
+    max_total_per_day: 1000
+    max_network_per_day: 250
+    max_execution_per_day: 50
+  execution:
+    max_tool_timeout_secs: 120
+    max_output_bytes: 1048576
+    max_write_bytes: 10485760
+    process_memory_limit_mb: 1024
+    windows_job_objects: true

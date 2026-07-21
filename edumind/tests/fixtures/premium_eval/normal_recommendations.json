@@ -1,0 +1,8 @@
+{
+  "signals": [
+    { "concept_id": "calculus", "correct": 1, "attempts": 10, "days_since_review": 22 },
+    { "concept_id": "biology", "correct": 9, "attempts": 10, "days_since_review": 1 }
+  ],
+  "expected_top": "calculus",
+  "minimum_priority": 300
+}

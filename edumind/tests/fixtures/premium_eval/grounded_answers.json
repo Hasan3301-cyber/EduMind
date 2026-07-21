@@ -1,0 +1,34 @@
+{
+  "sanitized_notes_text": "Retrieval practice improves later recall when learners attempt to retrieve before restudying.",
+  "pdf_as_text": "The classroom study reported better delayed recall after repeated retrieval sessions than after repeated reading.",
+  "expected_citation_coverage": 1.0,
+  "expected_evidence_precision": 1.0,
+  "answers": [
+    {
+      "expected_supported": true,
+      "answer": {
+        "answer": "Retrieval practice is supported as a way to improve delayed recall in the supplied sources.",
+        "status": "grounded",
+        "citations": [
+          { "source_id": "class-notes", "title": "Retrieval practice notes", "locator": "p. 1" },
+          { "source_id": "study-pdf", "title": "Classroom retrieval study", "locator": "p. 2" }
+        ],
+        "evidence": [
+          { "source_id": "class-notes", "start": 0, "end": 83, "text": "Retrieval practice improves later recall when learners attempt to retrieve before restudying." },
+          { "source_id": "study-pdf", "start": 0, "end": 106, "text": "The classroom study reported better delayed recall after repeated retrieval sessions than after repeated reading." }
+        ],
+        "confidence": 0.91
+      }
+    },
+    {
+      "expected_supported": false,
+      "answer": {
+        "answer": "The supplied material does not establish that retrieval practice always improves every subject.",
+        "status": "insufficient_evidence",
+        "citations": [],
+        "evidence": [],
+        "confidence": 0.0
+      }
+    }
+  ]
+}

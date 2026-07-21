@@ -1,0 +1,36 @@
+{
+  "name": "edumind-tauri",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:safety": "node --test scripts/*.test.mjs",
+    "test:e2e": "playwright test",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@tauri-apps/api": "2.10.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-force-graph-3d": "^1.27.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@playwright/test": "^1.55.0",
+    "@tauri-apps/cli": "2.10.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.25.0",
+    "globals": "^15.15.0",
+    "jsdom": "^25.0.1",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2"
+  }
+}

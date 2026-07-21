@@ -1,0 +1,5 @@
+# Rules are ranked by specificity; ties use the first matching rule.
+default:
+  module_id: student-os
+  agent_id: master
+routes: []

@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-07-19T08:00:00Z",
+  "records": [
+    {
+      "key": "calculus",
+      "value": {
+        "kind": "schedule-block",
+        "day": "Monday",
+        "title": "Calculus review",
+        "start": "09:00",
+        "end": "10:30"
+      }
+    },
+    {
+      "key": "lab",
+      "value": {
+        "kind": "schedule-block",
+        "day": "Monday",
+        "title": "Physics lab",
+        "start": "10:00",
+        "end": "11:00"
+      }
+    }
+  ],
+  "expected_conflicts": 1
+}

@@ -1,0 +1,7 @@
+{
+  "minimum_citation_coverage": 0.95,
+  "minimum_evidence_precision": 0.95,
+  "minimum_policy_denial_rate": 1.0,
+  "minimum_recommendation_priority": 300,
+  "minimum_vector_exact_score": 0.99
+}
