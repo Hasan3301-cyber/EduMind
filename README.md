@@ -100,6 +100,12 @@ The gateway binds to an OS-assigned loopback port, creates a per-launch bearer t
 
 GPT-5.6 Sol was used through Kiro for repository-wide gap analysis, architecture and safety review, transactional SQLite migration design, canonical Planner/Routine ownership, Class Notes transcript retrieval, SRS preview consistency, Research and Exam Practice workflow completion, redacted telemetry, packaged-runtime lifecycle testing, release CI, dashboard/project-note review, and repeated Rust, desktop, browser, Android, and installer validation. Model output was treated as untrusted: changes were checked against typed contracts and validated with deterministic tests and production builds.
 
+### Codex
+
+Codex helps build EduMind as an AI software-development assistant, not as a student-facing feature inside the final app. It reads the existing Rust, React/Tauri, Kotlin, and configuration code; then helps design features, write implementation code, connect services, diagnose errors, and run builds/tests.
+
+For this project, Codex has helped with the desktop dashboard and research workspace, multi-agent gateway logic, model-provider and NotebookLM integration, mobile lecture recording, AssemblyAI Bengali-English transcription, Supabase synchronization, UI improvements, security issues, and build/lint verification. It also helps maintain consistency between the desktop, backend, and mobile app while preserving the local-first architecture.
+
 ## Privacy and safety
 
 - Student databases, transcripts, recordings, generated artifacts, `.env` files, mobile properties, test reports, and signing files are excluded from source control.
