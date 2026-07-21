@@ -9,6 +9,10 @@ EduMind is a local-first AI student operating system that connects a confirmed w
 - **Primary platform:** Windows desktop (React, Tauri v2, Rust, and SQLite)
 - **Companion:** MeetMind for Android lecture recording and transcript delivery
 
+![EduMind Routine Coach showing a draft calculus study routine beside the canonical Monday planner](docs/assets/routine-coach.png)
+
+*Routine Coach uses canonical Planner context, surfaces assumptions and trade-offs, and waits for explicit approval before applying study blocks.*
+
 ## The problem
 
 Students commonly split their work across calendars, note generators, flashcard apps, research tools, and chat assistants. Those tools rarely share a trustworthy source of schedule or study state. The result is duplicated work, ungrounded AI output, and automated suggestions that can silently conflict with a student's actual commitments.
