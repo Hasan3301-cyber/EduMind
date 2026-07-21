@@ -19,3 +19,10 @@
 /OUTPUT/
 /.vscode/
 /.agents/
+/.kiro/
+
+# Local development and submission planning
+/AGENTS.md
+/EDUMIND_MASTER_BUILD_PROMPT.md
+/docs/BUILD_WEEK_SUBMISSION.md
+/plan/

@@ -100,10 +100,6 @@ The gateway binds to an OS-assigned loopback port, creates a per-launch bearer t
 
 GPT-5.6 Sol was used through Kiro for repository-wide gap analysis, architecture and safety review, transactional SQLite migration design, canonical Planner/Routine ownership, Class Notes transcript retrieval, SRS preview consistency, Research and Exam Practice workflow completion, redacted telemetry, packaged-runtime lifecycle testing, release CI, dashboard/project-note review, and repeated Rust, desktop, browser, Android, and installer validation. Model output was treated as untrusted: changes were checked against typed contracts and validated with deterministic tests and production builds.
 
-### Codex
-
-**Submission evidence pending:** this workspace does not contain verifiable metadata from an official Codex session, so no Codex contribution is claimed here yet. Before submission, the entrant must use Codex for a genuine, non-trivial repository task, preserve an honest summary of what it changed or reviewed, run `/feedback` in that official Codex interface, and replace this paragraph with the factual contribution. The `/feedback` session ID belongs in the Devpost form unless the official instructions explicitly request it in the public repository.
-
 ## Privacy and safety
 
 - Student databases, transcripts, recordings, generated artifacts, `.env` files, mobile properties, test reports, and signing files are excluded from source control.
@@ -450,11 +446,9 @@ an HTTPS Class Notes gateway or Supabase. See mobile/README.md for build and
 credential setup, and docs/MEETMIND_GATEWAY_BRIDGE.md for the secure direct
 gateway contract.
 
-## Agent Operating Rules
+## Local agent sandbox
 
-Repository-wide agent responsibilities, safe output conventions, and the
-Class Notes, Routine, Research, and Student Planner operating rules are in
-AGENTS.md.
+The installed desktop's bounded profile editor and safety model are documented in [`docs/AGENT_SANDBOX.md`](docs/AGENT_SANDBOX.md).
 
 ## Validate
 
