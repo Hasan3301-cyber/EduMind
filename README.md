@@ -5,6 +5,7 @@ EduMind is a local-first AI student operating system that connects a confirmed w
 - **OpenAI Build Week category:** Education
 - **Version:** 0.1.0
 - **Repository:** [github.com/Hasan3301-cyber/EduMind](https://github.com/Hasan3301-cyber/EduMind)
+- **Windows release:** [EduMind v0.1.0](https://github.com/Hasan3301-cyber/EduMind/releases/tag/v0.1.0)
 - **Primary platform:** Windows desktop (React, Tauri v2, Rust, and SQLite)
 - **Companion:** MeetMind for Android lecture recording and transcript delivery
 

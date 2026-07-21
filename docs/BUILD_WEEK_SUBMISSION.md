@@ -250,13 +250,13 @@ Test the final bundle on a clean Windows user or VM:
 
 ## Repository-publication check
 
-- [ ] Real Git history and remote are restored or supplied.
+- [x] Existing remote history was preserved and current source was committed and pushed without force.
 - [ ] README placeholders are replaced.
-- [ ] No `.env`, `local.properties`, database/WAL, transcript, recording, `OUTPUT`, test-results, Playwright report, `dist`, `target`, Gradle build, keystore, or signing certificate is committed.
-- [ ] `LICENSE` is present and ownership wording is accepted by the entrant/team.
+- [x] No `.env`, `local.properties`, database/WAL, transcript, recording, `OUTPUT`, test-results, Playwright report, `dist`, `target`, Gradle build, keystore, or signing certificate is committed.
+- [x] `LICENSE` is present with the repository owner's MIT copyright.
 - [ ] Source setup works from a fresh clone.
-- [ ] Release installers are uploaded as release artifacts, not committed as source.
-- [ ] Private repositories grant the official reviewer accounts access before the deadline.
+- [x] Release installers are uploaded as release artifacts, not committed as source.
+- [x] The repository is public; private reviewer invitations are not required.
 
 ## Devpost final checklist
 
@@ -274,12 +274,12 @@ Test the final bundle on a clean Windows user or VM:
 
 - [ ] Verify the official deadline and rules directly on Devpost.
 - [ ] Supply `[TEAM_REPRESENTATIVE]` and all `[TEAM_MEMBERS]`; every invitation is accepted.
-- [ ] Restore/supply `https://github.com/Hasan3301-cyber/EduMind` and verify reviewer access.
+- [x] Publish and verify the public repository: `https://github.com/Hasan3301-cyber/EduMind`.
 - [ ] Complete a genuine official Codex task and obtain `[CODEX_FEEDBACK_SESSION_ID]` with `/feedback`.
 - [ ] Replace every placeholder in README/submission copy.
 - [ ] Record, review, and upload the voiceover demo as Public or Unlisted: `[VIDEO_URL]`.
 - [ ] Confirm the video explicitly and accurately explains Codex and GPT-5.6 use.
-- [ ] Add installer/testing instructions and any required release link: `[RELEASE_URL]`.
+- [ ] Add the prepared installer/testing instructions and release link to Devpost: `https://github.com/Hasan3301-cyber/EduMind/releases/tag/v0.1.0`.
 - [ ] Submit the Devpost entry.
 - [ ] Open **My Projects** and verify the entry is green **Submitted**, not Draft.
 - [ ] Save submission confirmation screenshots/email.
@@ -287,7 +287,7 @@ Test the final bundle on a clean Windows user or VM:
 ## Links to complete
 
 - Repository: `https://github.com/Hasan3301-cyber/EduMind`
-- Windows release: `[RELEASE_URL]`
+- Windows release: `https://github.com/Hasan3301-cyber/EduMind/releases/tag/v0.1.0`
 - Demo video: `[VIDEO_URL]`
 - Devpost project: `[DEVPOST_PROJECT_URL]`
 - Team representative: `[TEAM_REPRESENTATIVE]`
