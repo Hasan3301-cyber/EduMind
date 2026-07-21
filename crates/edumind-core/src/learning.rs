@@ -68,11 +68,12 @@ pub fn score_mastery(signals: &[LearningSignal]) -> Vec<MasterySnapshot> {
     aggregates
         .into_iter()
         .map(|(concept_id, aggregate)| {
-            let accuracy = if aggregate.attempts == 0 {
-                0
-            } else {
-                ((aggregate.correct.saturating_mul(100) / aggregate.attempts).min(100)) as u8
-            };
+            let accuracy = aggregate
+                .correct
+                .saturating_mul(100)
+                .checked_div(aggregate.attempts)
+                .unwrap_or(0)
+                .min(100) as u8;
             let recency_penalty = aggregate.days_since_review.saturating_mul(3).min(45) as u8;
             let mastery_percent = accuracy.saturating_sub(recency_penalty);
             let retention_risk = retention_risk(

@@ -146,7 +146,7 @@ pub fn extract_concepts(content: &str) -> Vec<String> {
 #[must_use]
 pub fn build_knowledge_graph(records: &[MemoryRecord]) -> GraphData {
     let mut records = records.to_vec();
-    records.sort_by(|left, right| left.id.cmp(&right.id));
+    records.sort_by_key(|record| record.id);
     let mut nodes = Vec::new();
     let mut edges = Vec::new();
     let mut concept_counts = BTreeMap::<String, usize>::new();
